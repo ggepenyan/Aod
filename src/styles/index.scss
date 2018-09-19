@@ -1,0 +1,171 @@
+@import "variables/_colors.scss";
+
+@import url('https://fonts.googleapis.com/css?family=Imprima');
+
+@import "_libraries/bootstrap/bootstrap-grid.min.scss";
+
+@import "layouts/_header.scss";
+@import "layouts/_tabs.scss";
+@import "layouts/_table.scss";
+
+@-ms-viewport {
+  width: device-width;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  *,
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+  &:focus{
+    outline: none;
+  }
+}
+
+
+html{
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Impirama', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: $text-main;
+  background-color: $main-bg;
+}
+
+input, textarea, select, button {
+  font-family: 'Impirama', sans-serif!important;
+}
+
+.h1{
+  font-size: 40px;
+}
+.h2{
+  font-size: 26px;
+}
+.h3{
+  font-size: 16px;
+}
+.h4{
+  font-size: 14px;
+}
+.text-md{
+  font-size: 12px;
+}
+
+.text-sm{
+  font-size: 10px;
+}
+
+.p{
+  line-height: 21px;
+}
+
+a{
+  display: block;
+  text-decoration: none;
+  color: $text-main;
+  &.active{
+    color: $primary;
+  }
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.round-corners{
+  border-radius: 50%;
+  img{
+    border-radius: 50%;
+  }
+}
+
+.main-input-field-label{
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  pointer-events: none;
+  transition: all .3s;
+  // color: $placeholder;
+}
+
+.btn-no-bg{
+  min-width: 160px;
+  padding: 15px 55px;
+  border: 2px solid transparent;
+  background-color: $white;
+  border-radius: 5px;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  color: $text-main;
+  transition: border-color .3s;
+  &:hover{
+    // border: 2px solid $active;
+    background-color: $white;
+  }
+}
+
+
+.btn-reset{
+  padding: 0px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.btn-primary,
+.btn-warning,
+.btn-active{
+  height: 58px;
+  border: none;
+  border-radius: 5px;
+  line-height: 58px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+}
+.btn-primary{
+  background-color: $primary;
+}
+// .btn-warning{
+//   // color: $placeholder;
+//   background-color: $warning-bg;
+// }
+//
+// .btn-active {
+//   background-color: $active;
+// }
+
+.page-name{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.main-content{
+  margin-top: 5px;
+  border: 1px solid $border;
+  overflow: auto;
+  background-color: $white;
+  .headline{
+    padding: 10px 20px;
+    background-color: $white;
+  }
+}
+
+@media (min-width: 1400px){
+  .container{
+    max-width: 1300px!important;
+  }
+}
